@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     const sections = document.querySelectorAll('section[id]');
     const navbar = document.querySelector('.navbar-collapse');
+    const navbarToggler = document.querySelector('.navbar-toggler');
     const emailBtn = document.querySelector('.btn-rounded');
     
     // Function to remove active class from all nav links
@@ -91,6 +92,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Close navbar when clicking outside
+    document.addEventListener('click', function(event) {
+        // Check if click is outside both the navbar and the toggler button
+        if (!navbar.contains(event.target) && !navbarToggler.contains(event.target)) {
+            if (navbar.classList.contains('show')) {
+                bootstrap.Collapse.getInstance(navbar).hide();
+            }
+        }
+    });
+    
     // Handle scroll events to highlight current section
     function handleScroll() {
         let current = '';
@@ -153,13 +164,6 @@ window.addEventListener('scroll', function() {
         }
     }
 });
-
-
-// function sendMail(){
-//   var subject = document.getElementById("subject").value;
-//   var mailBody = document.getElementById("mailBody").value;
-//   window.location.href = "mailto:hiteshkumarjainhkj@gmail.com?subject=" + subject + "&body=" + mailBody;
-// }
 
 function sendMail(){
   var subject = document.getElementById("subject").value;

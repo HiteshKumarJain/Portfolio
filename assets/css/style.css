@@ -12224,8 +12224,8 @@ fieldset:disabled .btn {
   font-weight: 500;
 }
 
-.portfolio-info p strong + text,
-.portfolio-info p strong ~ text {
+.portfolio-info p strong+text,
+.portfolio-info p strong~text {
   color: #000;
   font-weight: 500;
 }
@@ -12259,68 +12259,94 @@ fieldset:disabled .btn {
 
 .portfolio-box.dark-overlay .portfolio-info strong {
   color: white;
-} 
+}
 
-/* CSS for download resume button */
+
+/* new css for download resume button */
 
 .custom-download-btn {
-    /* Remove default link styling */
-    text-decoration: none !important;
-    display: inline-flex;
-    align-items: center;
-    
-    /* Button styling to match your screenshot */
-    background-color: #ffffff;
-    color: #333333;
-    padding: 12px 20px;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    
-    /* Smooth transitions */
-    transition: all 0.3s ease;
-    
-    /* Shadow for depth */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    
-    /* Ensure proper spacing */
-    gap: 8px;
+  /* Remove default link styling */
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+
+  /* Button styling to match your screenshot */
+  background-color: #ffffff;
+  color: #333333;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+
+  /* Smooth transitions */
+  transition: all 0.3s ease;
+
+  /* Shadow for depth */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  /* Ensure proper spacing */
+  gap: 8px;
 }
 
 .custom-download-btn:hover {
-    background: linear-gradient(135deg, #c44fc4 0%, #a855f7 50%, #9333ea 100%); /* Linear gradient with all three purple shades */
-    color: #ffffff; /* White text on hover */
-    text-decoration: none !important;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #c44fc4 0%, #a855f7 50%, #9333ea 100%);
+  /* Linear gradient with all three purple shades */
+  color: #ffffff;
+  /* White text on hover */
+  text-decoration: none !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .custom-download-btn:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Style the icon container */
 .custom-download-btn .download-icon {
-    background-color: #8e44ad; /* Purple color matching your design */
-    color: white;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    transition: all 0.3s ease;
+  background-color: #8e44ad;
+  /* Purple color matching your design */
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .custom-download-btn:hover .download-icon {
-    background-color: #ffffff; /* White background for icon on hover */
-    color: #8e44ad; /* Purple icon color on hover */
+  background-color: #ffffff;
+  /* White background for icon on hover */
+  color: #8e44ad;
+  /* Purple icon color on hover */
 }
 
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .custom-download-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-download-btn {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .custom-download-btn .download-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
 
 /* CSS for view my work button */
 
